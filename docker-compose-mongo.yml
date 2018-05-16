@@ -1,0 +1,15 @@
+version: "2.3"
+services: 
+ mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    restart: always
+    hostname: mongo
+    container_name: mongo
+    #mem_reservation: 1g
+    #wiredTiger at 2GB
+    command: --dbpath=/data/db --directoryperdb
+    volumes:
+      - ./data/db:/data/db
+
