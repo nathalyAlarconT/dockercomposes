@@ -1,0 +1,14 @@
+version: "2.3"
+services:
+  flow:
+    image: "nodered/node-red-docker"
+    ports: 
+      - "1880:1880"
+    #restart: always
+    hostname: flow
+    container_name: flow
+    volumes:
+      - ./flows:/flows
+    #  - ./node-red-data:/data
+    #cpu_count: 1
+    #mem_reservation: 1g
